@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#180d20">
+  <title>Deisy Juliana ❤️</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="ambient-glow glow-one"></div>
+  <div class="ambient-glow glow-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" data-go="inicio">
+      <span class="brand-heart">♥</span>
+      <span>Para <strong>Deisy Juliana</strong></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="mainNav">
+      <button class="nav-button active" data-page="inicio">Inicio</button>
+      <button class="nav-button" data-page="razones">Razones</button>
+      <button class="nav-button" data-page="mensajes">Mensajes</button>
+      <button class="nav-button" data-page="juego">Juego</button>
+      <button class="nav-button" data-page="secreto">Secreto</button>
+      <button class="nav-button" data-page="carta">Carta final</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="section active hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">✦ UN PEQUEÑO LUGAR HECHO PARA TI</p>
+
+        <h1>Deisy Juliana,<br>
+          <span>mi persona favorita.</span>
+        </h1>
+
+        <p class="hero-text">
+          Hay personas que llegan a la vida y la hacen más bonita
+          sin siquiera intentarlo. Tú eres una de ellas.
+          Este rinconcito es para recordarte lo especial que eres para mí.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary-button" data-go="razones">
+            Descubre tus razones ♥
+          </button>
+          <button class="secondary-button" data-go="carta">
+            Leer mi carta
+          </button>
+        </div>
+
+        <p class="little-note">Hecho con cariño, especialmente para ti ✨</p>
+      </div>
+
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="heart-main">♥</div>
+        <span class="floating-heart heart-a">♥</span>
+        <span class="floating-heart heart-b">♥</span>
+        <span class="floating-star star-a">✦</span>
+        <span class="floating-star star-b">✧</span>
+        <div class="art-caption">♥ Un detalle para alguien única</div>
+      </div>
+    </section>
+
+    <section class="section" id="razones">
+      <div class="section-heading">
+        <p class="eyebrow">PEQUEÑAS COSAS, SENTIMIENTOS ENORMES</p>
+        <h2>Razones por las que <span>eres especial</span></h2>
+        <p>No hace falta una fecha especial para recordarte todo lo bonito que hay en ti.</p>
+      </div>
+
+      <div class="reason-feature card">
+        <div class="reason-number" id="reasonNumber">01</div>
+        <p class="reason-text" id="reasonText"></p>
+        <button class="primary-button" id="nextReason">
+          Dame otra razón ♥
+        </button>
+      </div>
+
+      <div class="reason-grid" id="reasonGrid"></div>
+    </section>
+
+    <section class="section" id="mensajes">
+      <div class="section-heading">
+        <p class="eyebrow">PARA LEER CUANDO QUIERAS</p>
+        <h2>Un mensajito <span>para ti</span></h2>
+        <p>Elige uno. Ojalá te saque una sonrisa, incluso en un día difícil.</p>
+      </div>
+
+      <div class="message-layout">
+        <div class="message-list" id="messageList"></div>
+
+        <div class="message-display card">
+          <div class="message-icon">♡</div>
+          <p class="message-label">Un recordatorio para ti</p>
+          <p class="message-text" id="messageText"></p>
+          <button class="secondary-button" id="copyMessage">
+            Copiar mensaje
+          </button>
+          <span class="copy-status" id="copyStatus"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="juego">
+      <div class="section-heading">
+        <p class="eyebrow">UNA PEQUEÑA PRUEBA DE CARIÑO</p>
+        <h2>¿Cuánto sabes de <span>este detalle?</span></h2>
+        <p>Responde estas preguntas divertidas. No hay respuestas malas.</p>
+      </div>
+
+      <div class="quiz-card card">
+        <div class="quiz-progress"><span id="quizProgress"></span></div>
+        <p class="quiz-count" id="quizCount"></p>
+        <h3 id="quizQuestion"></h3>
+        <div class="quiz-options" id="quizOptions"></div>
+        <p class="quiz-feedback" id="quizFeedback"></p>
+        <button class="primary-button" id="nextQuestion" disabled>
+          Siguiente pregunta →
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="secreto">
+      <div class="section-heading">
+        <p class="eyebrow">PSST… HAY ALGO MÁS</p>
+        <h2>Una pequeña <span>sorpresa secreta</span></h2>
+        <p>Escribe la palabra que creas que abre este detallito.</p>
+      </div>
+
+      <div class="secret-card card">
+        <div class="lock-icon" id="lockIcon">🔐</div>
+        <label for="secretWord">Palabra secreta</label>
+
+        <div class="secret-form">
+          <input id="secretWord" type="text"
+            placeholder="Escribe aquí..." autocomplete="off">
+          <button class="primary-button" id="unlockSecret">Abrir</button>
+        </div>
+
+        <p class="secret-feedback" id="secretFeedback"></p>
+
+        <div class="secret-reveal" id="secretReveal" hidden>
+          <div class="reveal-heart">♥</div>
+          <h3>¡Lo encontraste, Deisy Juliana!</h3>
+          <p>
+            Si pudiera regalarte una cosa, sería la capacidad de verte
+            con mis ojos para que entendieras lo increíble y valiosa que eres.
+          </p>
+          <p class="signature">Con muchísimo cariño ✨</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="carta">
+      <div class="section-heading">
+        <p class="eyebrow">UNAS PALABRAS DESDE EL CORAZÓN</p>
+        <h2>Para ti, <span>Deisy Juliana</span></h2>
+      </div>
+
+      <article class="letter card">
+        <div class="letter-top">♥　Con cariño　♥</div>
+
+        <p>Deisy Juliana:</p>
+
+        <p>
+          Quería tener un detalle diferente para recordarte que eres
+          una persona muy especial. A veces las palabras se quedan cortas
+          para expresar lo que alguien significa, pero aun así vale la pena intentarlo.
+        </p>
+
+        <p>
+          Deseo que nunca dudes de tu valor, de tu fuerza ni de todo lo
+          bonito que llevas dentro. Mereces días tranquilos, motivos para
+          sonreír, sueños que se cumplan y personas que te quieran de una
+          manera sincera y bonita.
+        </p>
+
+        <p>
+          Cuando tengas un día difícil, vuelve a este pequeño lugar y
+          recuerda que también existen detalles hechos simplemente para
+          sacarte una sonrisa.
+        </p>
+
+        <p>Gracias por ser tú. No olvides lo especial que eres.</p>
+
+        <p class="letter-signature">
+          Con mucho cariño,<br>
+          <strong>alguien que quiso hacerte sonreír ♥</strong>
+        </p>
+
+        <div class="letter-bottom">
+          Hecho especialmente para Deisy Juliana ✧
+        </div>
+      </article>
+
+      <div class="center-action">
+        <button class="primary-button" id="celebrateButton">
+          Enviar una lluvia de corazones ♥
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      ♥ Un detalle para Deisy Juliana ♥
+    </footer>
+  </main>
+
+  <div class="toast" id="toast"></div>
+</body>
+</html>
